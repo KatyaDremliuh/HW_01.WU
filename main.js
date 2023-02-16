@@ -154,6 +154,42 @@ for (var field in person) {
 //     }
 // }
 
+// let text =
+//   "В ту же ночь приехал я в Симбирск, где должен был пробыть сутки для закупки нужных вещей, что и было поручено Савельичу. Я остановился в трактире. Савельич с утра отправился по лавкам";
+
+// const mixed = [
+//   "я в Симбирск,",
+//   "в трактире.",
+//   "с утра",
+//   "В ту же ночь",
+//   "Я остановился",
+//   "для закупки",
+//   "что и было поручено Савельичу.",
+//   "приехал",
+//   "где должен был",
+//   "нужных вещей,",
+//   "отправился по лавкам",
+//   "пробыть сутки",
+//   "Савельич",
+// ];
+
+// let dictionary = {};
+// for (let i = 0; i < mixed.length; i++) {
+//   let value = mixed[i];
+//   let key = text.indexOf(mixed[i]);
+
+//   dictionary[key] = value;
+// }
+
+// let result = "";
+// for (var key in dictionary) {
+//   console.log(key + " : " + dictionary[key]);
+//   result += `${dictionary[key]} `;
+// }
+
+// result = result.trim();
+// console.log(`Итог:\n${result}`);
+
 let text =
   "В ту же ночь приехал я в Симбирск, где должен был пробыть сутки для закупки нужных вещей, что и было поручено Савельичу. Я остановился в трактире. Савельич с утра отправился по лавкам";
 
@@ -173,22 +209,8 @@ const mixed = [
   "Савельич",
 ];
 
-let dictionary = {};
-for (let i = 0; i < mixed.length; i++) {
-  let value = mixed[i];
-  let key = text.indexOf(mixed[i]);
-
-  dictionary[key] = value;
-}
-
-let result = "";
-for (var key in dictionary) {
-  console.log(key + " : " + dictionary[key]);
-  result += `${dictionary[key]} `;
-}
-
-result = result.trim();
-console.log(`Итог:\n${result}`);
+let result = `${mixed[3]} ${mixed[7]} ${mixed[0]} ${mixed[8]} ${mixed[11]} ${mixed[5]} ${mixed[9]} ${mixed[6]} ${mixed[4]} ${mixed[1]} ${mixed[12]} ${mixed[2]} ${mixed[10]}`;
+console.log(result);
 
 // Task 4.
 const getFullName = (firstName, lastName) => {
